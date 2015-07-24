@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BofhDotNet
+namespace BofhDotNet.IrcBotCommon
 {
     public class IrcBotException : Exception
     {

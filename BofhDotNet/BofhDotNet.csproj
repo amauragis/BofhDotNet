@@ -59,11 +59,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleUtilities.cs" />
-    <Compile Include="InvalidCommandParametersException.cs" />
-    <Compile Include="IrcBot.cs" />
-    <Compile Include="IrcBotException.cs" />
-    <Compile Include="IrcBotUtilities.cs" />
+    <Compile Include="BofhBot.cs" />
+    <Compile Include="IrcBotCommon\BasicIrcBot.cs" />
+    <Compile Include="IrcBotCommon\ConsoleUtilities.cs" />
+    <Compile Include="IrcBotCommon\InvalidCommandParametersException.cs" />
+    <Compile Include="IrcBotCommon\IrcBot.cs" />
+    <Compile Include="IrcBotCommon\IrcBotException.cs" />
+    <Compile Include="IrcBotCommon\IrcBotUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

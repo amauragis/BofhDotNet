@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace BofhDotNet
+namespace BofhDotNet.IrcBotCommon
 {
     // Utilities for working with operating system console interface.
     public static class ConsoleUtilities

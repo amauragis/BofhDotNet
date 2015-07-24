@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using IrcDotNet;
 
-namespace BofhDotNet
+namespace BofhDotNet.IrcBotCommon
 {
     // Provides core functionality for an IRC bot that operates via multiple clients.
     public abstract class IrcBot : IDisposable
@@ -33,7 +32,7 @@ namespace BofhDotNet
 
         private bool isDisposed = false;
 
-        public IrcBot()
+        protected IrcBot()
         {
             this.isRunning = false;
             this.commandProcessors = new Dictionary<string, CommandProcessor>(
