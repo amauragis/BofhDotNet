@@ -15,7 +15,7 @@ namespace BofhDotNet
 
         public static void WriteWarning(string message, params string[] args)
         {
-            UseTextColor(ConsoleColor.Yellow, () => Console.Error.WriteLine(message, args))
+            UseTextColor(ConsoleColor.Yellow, () => Console.Error.WriteLine(message, args));
         }
 
         public static void UseTextColor(ConsoleColor colour, Action action)
@@ -24,6 +24,11 @@ namespace BofhDotNet
             Console.ForegroundColor = colour;
             action();
             Console.ForegroundColor = prevForegroundColor;
+        }
+
+        public static void Test()
+        {
+            Console.Error.WriteLine("This is a dumb test");
         }
     }
 }
