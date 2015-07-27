@@ -103,7 +103,7 @@ namespace BofhDotNet.IrcBotCommon
             this.isRunning = true;
             while (this.isRunning)
             {
-                Console.Write("> ");
+                Console.Write(@"> ");
                 var line = Console.ReadLine();
                 if (line == null)
                     break;
