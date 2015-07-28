@@ -98,6 +98,7 @@ namespace BofhDotNet
             base.InitializeChatCommandProcessors();
 
             this.ChatCommandProcessors.Add("buttes", ProcessChatCommandButtes);
+            this.ChatCommandProcessors.Add("bofhwitsdie",ProcessChatCommandBofhwitsdie);
 
             //this.ChatCommandProcessors.Add("talk", ProcessChatCommandTalk);
             //this.ChatCommandProcessors.Add("stats", ProcessChatCommandStats);
@@ -109,6 +110,14 @@ namespace BofhDotNet
             IList<IIrcMessageTarget> targets, string command, IList<string> parameters)
         {
             client.LocalUser.SendNotice(targets, "donges.");
+        }
+
+        private void ProcessChatCommandBofhwitsdie(IrcClient client, IIrcMessageSource source,
+            IList<IIrcMessageTarget> targets, string command, IList<string> parameters)
+        {
+            client.LocalUser.SendNotice(targets, "You've killed me!");
+            ConsoleUtilities.WriteError("Killed by '{0}'. ({1} {2})", source.Name, command, parameters.ToString());
+            Stop();
         }
 
         //private void ProcessChatCommandTalk(IrcClient client, IIrcMessageSource source,
